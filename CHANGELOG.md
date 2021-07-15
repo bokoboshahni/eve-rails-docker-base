@@ -1,3 +1,7 @@
+# EVE Rails Docker Base Image Changelog
+
+## [1.0.1](https://github.com/bokoboshahni/eve-rails-docker-base/compare/v1.0.0...v1.0.1) (2021-07-15)
+
 # EVE Member Mailer Docker Base Image Changelog
 
 # 1.0.0 (2021-07-15)
