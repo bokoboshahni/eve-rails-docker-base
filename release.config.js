@@ -16,7 +16,7 @@ module.exports = {
     }],
     '@semantic-release/release-notes-generator',
     ['@semantic-release/changelog', {
-      changelogTitle: '# EVE Member Mailer Docker Base Image Changelog'
+      changelogTitle: '# EVE Rails Docker Base Image Changelog'
     }],
     ['@semantic-release/npm', {
       npmPublish: false
