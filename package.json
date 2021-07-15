@@ -1,0 +1,5 @@
+{
+  "name": "eve-member-mailer-docker-base",
+  "private": true,
+  "dependencies": {}
+}
