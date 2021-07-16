@@ -19,6 +19,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v3
+        with:
+          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
+          git-user-signingkey: true
+          git-commit-gpgsign: true
+          git-tag-gpgsign: true
+          git-push-gpgsign: true
+          git-committer-name: Bokobo Shahni
+          git-committer-email: shahni@bokobo.space
+
       - name: Set up Node
         uses: actions/setup-node@v2
         with:
