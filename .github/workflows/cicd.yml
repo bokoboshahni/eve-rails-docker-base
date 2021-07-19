@@ -11,24 +11,27 @@ on:
 
 jobs:
   release:
-    name: Publish Release
+    name: Release
     runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request' && github.event_name != 'release'
+    if: github.event_name != 'release'
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
       - name: Import GPG key
-        uses: crazy-max/ghaction-import-gpg@v3
-        with:
-          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
-          passphrase: ${{ secrets.PASSPHRASE }}
-          git-user-signingkey: true
-          git-commit-gpgsign: true
-          git-tag-gpgsign: true
-          git-committer-name: Bokobo Shahni
-          git-committer-email: shahni@bokobo.space
+        env:
+          GPG_KEY_ID: A03C30CF96CDB08EAC8871769E0DCFE4C88682AB
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        run: |
+          echo "${GPG_PRIVATE_KEY}" > /tmp/gpg-key.asc
+          chmod 600 /tmp/gpg-key.asc
+          gpg --batch --yes --import /tmp/gpg-key.asc
+          echo "/usr/bin/gpg2 --passphrase '${GPG_PASSPHRASE}' --batch --no-tty \"$@\"" > /tmp/gpg-with-passphrase && chmod +x /tmp/gpg-with-passphrase
+          git config gpg.program /tmp/gpg-with-passphrase
+          git config commit.gpgsign true
+          git config --global user.signingkey ${GPG_KEY_ID}
 
       - name: Set up Node
         uses: actions/setup-node@v2
@@ -44,7 +47,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           npm install -g @semantic-release/changelog @semantic-release/git
-          npx semantic-release
+          npx semantic-release ${{ github.event_name == 'pull_request' && '--dry-run' || ' ' }}
 
   build:
     name: Build and Push Images
