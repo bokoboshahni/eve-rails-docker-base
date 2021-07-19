@@ -19,20 +19,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Import GPG key
-        env:
-          GPG_KEY_ID: A03C30CF96CDB08EAC8871769E0DCFE4C88682AB
-          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
-          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
-        run: |
-          echo "${GPG_PRIVATE_KEY}" > /tmp/gpg-key.asc
-          chmod 600 /tmp/gpg-key.asc
-          gpg --batch --yes --import /tmp/gpg-key.asc
-          echo "/usr/bin/gpg2 --passphrase '${GPG_PASSPHRASE}' --batch --no-tty \"$@\"" > /tmp/gpg-with-passphrase && chmod +x /tmp/gpg-with-passphrase
-          git config gpg.program /tmp/gpg-with-passphrase
-          git config commit.gpgsign true
-          git config --global user.signingkey ${GPG_KEY_ID}
-
       - name: Set up Node
         uses: actions/setup-node@v2
         with:
