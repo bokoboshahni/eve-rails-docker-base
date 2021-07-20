@@ -4,6 +4,7 @@ LABEL maintainer="shahni@bokobo.space"
 
 # Add basic packages
 RUN apk add --no-cache \
+      libcurl \
       memcached \
       postgresql-client \
       redis \
