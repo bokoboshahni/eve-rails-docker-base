@@ -1,5 +1,12 @@
 # EVE Rails Docker Base Image Changelog
 
+# [1.2.0](https://github.com/bokoboshahni/eve-rails-docker-base/compare/v1.1.0...v1.2.0) (2021-07-20)
+
+
+### Features
+
+* Update es-sdk to 1.2.0 ([302446a](https://github.com/bokoboshahni/eve-rails-docker-base/commit/302446a6d7852609e0fedd6873b2f71ce72f9605))
+
 # [1.1.0](https://github.com/bokoboshahni/eve-rails-docker-base/compare/v1.0.1...v1.1.0) (2021-07-19)
 
 
