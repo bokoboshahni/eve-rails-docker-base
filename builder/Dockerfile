@@ -5,6 +5,7 @@ LABEL maintainer="shahni@bokobo.space"
 # Add basic packages
 RUN apk add --no-cache \
       build-base \
+      curl-dev \
       postgresql-dev \
       git \
       nodejs \
