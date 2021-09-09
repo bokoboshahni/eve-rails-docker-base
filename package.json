@@ -1,5 +1,18 @@
 {
-  "name": "eve-member-mailer-docker-base",
+  "name": "eve-rails-docker-base",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "version": "1.2.0",
+  "description": "Optimized Docker base image for third-party EVE Online MMORPG built with Ruby on Rails.",
+  "repository": "https://github.com/bokoboshahni/eve-rails-docker-base.git",
+  "author": "Bokobo Shahni <shahni@bokobo.space>",
+  "license": "MIT",
+  "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.1",
+    "semantic-release": "^17.4.7"
+  },
+  "scripts": {
+    "release": "semantic-release"
+  }
 }
