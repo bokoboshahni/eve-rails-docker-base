@@ -36,7 +36,7 @@ RUN apk add --no-cache \
 WORKDIR /app
 
 # Install Python modules
-RUN pip install pipenv
+RUN pip install --upgrade pip && pip install pipenv
 COPY Pipfile Pipfile.lock /app/
 RUN PIPENV_VENV_IN_PROJECT=1 pipenv install --deploy
 
@@ -54,7 +54,8 @@ RUN bundle config --local frozen 1 && \
 
 # Install Python packages
 ONBUILD COPY Pipfile Pipfile.lock /app/
-ONBUILD RUN pip install pipenv && \
+ONBUILD RUN python -m pip install --upgrade pip && \
+            pip install pipenv && \
             PIPENV_VENV_IN_PROJECT=1 pipenv install --deploy
 
 # Install Ruby gems (for production only)

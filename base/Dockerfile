@@ -12,6 +12,8 @@ RUN apk add --no-cache \
       tzdata \
       file
 
+RUN pip install --upgrade pip
+
 # Configure Rails
 ENV RAILS_LOG_TO_STDOUT true
 ENV RAILS_SERVE_STATIC_FILES true
