@@ -5,8 +5,9 @@ LABEL maintainer="shahni@bokobo.space"
 # Add basic packages
 RUN apk add --no-cache \
       libcurl \
-      memcached \
       postgresql-client \
+      python3 \
+      py3-pip \
       redis \
       tzdata \
       file
@@ -22,6 +23,7 @@ EXPOSE 3000
 
 # This image is for production env only
 ENV RAILS_ENV production
+ENV PATH="/app/.venv/bin:$PATH"
 
 # Write GIT commit SHA and TIME to env vars
 ONBUILD ARG COMMIT_SHA
