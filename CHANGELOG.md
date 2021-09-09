@@ -1,5 +1,12 @@
 # EVE Rails Docker Base Image Changelog
 
+# [1.3.0](https://github.com/bokoboshahni/eve-rails-docker-base/compare/v1.2.0...v1.3.0) (2021-09-09)
+
+
+### Features
+
+* add support for python 3 ([eecd3a8](https://github.com/bokoboshahni/eve-rails-docker-base/commit/eecd3a8d0c5130f868f45178d8c95fdf8dcfde14))
+
 # [1.2.0](https://github.com/bokoboshahni/eve-rails-docker-base/compare/v1.1.0...v1.2.0) (2021-07-20)
 
 
