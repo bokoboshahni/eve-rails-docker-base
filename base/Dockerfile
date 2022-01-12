@@ -6,8 +6,6 @@ LABEL maintainer="shahni@bokobo.space"
 RUN apk add --no-cache \
       libcurl \
       postgresql-client \
-      python3 \
-      py3-pip \
       redis \
       tzdata \
       file
