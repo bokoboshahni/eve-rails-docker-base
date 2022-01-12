@@ -1,5 +1,12 @@
 # EVE Rails Docker Base Image Changelog
 
+# [1.6.0](https://github.com/bokoboshahni/eve-rails-docker-base/compare/v1.5.0...v1.6.0) (2022-01-12)
+
+
+### Features
+
+* add ASSET_PRECOMPILE variable ([8a0b1f8](https://github.com/bokoboshahni/eve-rails-docker-base/commit/8a0b1f87adf8017d8d9e9a83471a87bc732f9eb8))
+
 # [1.5.0](https://github.com/bokoboshahni/eve-rails-docker-base/compare/v1.4.0...v1.5.0) (2022-01-12)
 
 

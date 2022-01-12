@@ -2,7 +2,7 @@
   "name": "eve-rails-docker-base",
   "private": true,
   "dependencies": {},
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Optimized Docker base image for third-party EVE Online MMORPG built with Ruby on Rails.",
   "repository": "https://github.com/bokoboshahni/eve-rails-docker-base.git",
   "author": "Bokobo Shahni <shahni@bokobo.space>",
