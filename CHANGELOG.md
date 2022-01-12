@@ -1,5 +1,12 @@
 # EVE Rails Docker Base Image Changelog
 
+# [1.4.0](https://github.com/bokoboshahni/eve-rails-docker-base/compare/v1.3.0...v1.4.0) (2022-01-12)
+
+
+### Features
+
+* update to ruby 3.0.3 ([75d0008](https://github.com/bokoboshahni/eve-rails-docker-base/commit/75d0008d801069118a57520e2873173a0cdf4bd7))
+
 # [1.3.0](https://github.com/bokoboshahni/eve-rails-docker-base/compare/v1.2.0...v1.3.0) (2021-09-09)
 
 
