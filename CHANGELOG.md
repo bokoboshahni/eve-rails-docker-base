@@ -1,5 +1,12 @@
 # EVE Rails Docker Base Image Changelog
 
+# [1.5.0](https://github.com/bokoboshahni/eve-rails-docker-base/compare/v1.4.0...v1.5.0) (2022-01-12)
+
+
+### Features
+
+* remove python ([2a9eb8d](https://github.com/bokoboshahni/eve-rails-docker-base/commit/2a9eb8da56f7a90b72e6b10778a562ff8c85cac7))
+
 # [1.4.0](https://github.com/bokoboshahni/eve-rails-docker-base/compare/v1.3.0...v1.4.0) (2022-01-12)
 
 
