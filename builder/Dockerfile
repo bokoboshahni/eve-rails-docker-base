@@ -6,39 +6,14 @@ LABEL maintainer="shahni@bokobo.space"
 RUN apk add --no-cache \
       build-base \
       curl-dev \
-      freetype-dev \
       postgresql-dev \
       git \
-      g++ \
-      gfortran \
-      lapack \
-      lapack-dev \
-      libexecinfo-dev \
-      libgcc \
-      libgfortran \
-      libgomp \
-      libpng-dev \
-      libquadmath \
-      libstdc++ \
-      musl \
-      musl-dev \
       nodejs \
-      openblas-dev \
-      proj \
-      proj-dev \
-      python3 \
-      python3-dev \
-      py3-pip \
       yarn \
       tzdata \
       file
 
 WORKDIR /app
-
-# Install Python modules
-RUN pip install pipenv
-COPY Pipfile Pipfile.lock /app/
-RUN PIPENV_VENV_IN_PROJECT=1 pipenv install --deploy
 
 # Install standard Node modules
 COPY package.json yarn.lock /app/
@@ -51,11 +26,6 @@ RUN bundle config --local frozen 1 && \
     bundle install -j4 --retry 3
 
 #### ONBUILD: Add triggers to the image, executed later while building a child image
-
-# Install Python packages
-ONBUILD COPY Pipfile Pipfile.lock /app/
-ONBUILD RUN pip install pipenv && \
-            PIPENV_VENV_IN_PROJECT=1 pipenv install --deploy
 
 # Install Ruby gems (for production only)
 ONBUILD COPY Gemfile* /app/
