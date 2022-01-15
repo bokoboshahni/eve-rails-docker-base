@@ -58,6 +58,7 @@ ONBUILD RUN --mount=type=secret,id=npmrc,dst=/root/.npmrc \
             SECRET_KEY_BASE=dummy \
             RAILS_MASTER_KEY=dummy \
             ASSET_PRECOMPILE=1 \
+            DISABLE_PROMETHEUS=1 \
             bundle exec rails assets:precompile
 ONBUILD RUN mv config/credentials.yml.enc.bak config/credentials.yml.enc 2>/dev/null || true
 ONBUILD RUN mv config/credentials.bak config/credentials 2>/dev/null || true
