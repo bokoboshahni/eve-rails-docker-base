@@ -1,5 +1,12 @@
 # EVE Rails Docker Base Image Changelog
 
+## [1.6.1](https://github.com/bokoboshahni/eve-rails-docker-base/compare/v1.6.0...v1.6.1) (2022-01-15)
+
+
+### Bug Fixes
+
+* disable prometheus for asset precompile ([#15](https://github.com/bokoboshahni/eve-rails-docker-base/issues/15)) ([c04a86d](https://github.com/bokoboshahni/eve-rails-docker-base/commit/c04a86dee14c2b00ccad3cc49584b9aac7b2c9f7))
+
 # [1.6.0](https://github.com/bokoboshahni/eve-rails-docker-base/compare/v1.5.0...v1.6.0) (2022-01-12)
 
 
