@@ -1489,7 +1489,7 @@ GEM
       elasticsearch (>= 6)
       hashie
     semantic_range (3.0.0)
-    sidekiq (6.2.1)
+    sidekiq (6.4.0)
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
       redis (>= 4.2.0)
@@ -1639,7 +1639,7 @@ DEPENDENCIES
   safely_block (~> 0.3)
   searchjoy (~> 0.5)
   searchkick (~> 4.5)
-  sidekiq (~> 6.2)
+  sidekiq (~> 6.4)
   sidekiq-batch (~> 0.1)
   sidekiq-scheduler (~> 3.1)
   sidekiq-status (~> 2.0)
